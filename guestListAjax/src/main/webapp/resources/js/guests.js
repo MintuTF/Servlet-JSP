@@ -16,13 +16,12 @@ function updateGuests() {
 }
 
 function displayGuests(data) {
-    // var guestList = "You need to modify this method to display the updated guest list.  Remember to build the entire list before adding it to the DOM.";
 
-      var  guestList=JSON.parse(data);
-
-     $("#guestList").html(guestList.first);
-    $("#guestList").html(guestList.last);
+    $.each(data, function(i, item) {
+        $("#guestList").text("<p>" + item.first + " " + item.last + "</p>");
+    });
 
 
-    
+
+
 }
